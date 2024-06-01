@@ -63,8 +63,9 @@ function PdfParser() {
 
     try {
       const response = await axios.post(
-         "https://resume-match-system.onrender.com/api/parse-pdf",
+        // "https://resume-match-system.onrender.com/api/parse-pdf",
         // "http://localhost:3000/api/parse-pdf",
+        "https://resume-back-sguq.onrender.com/api/parse-pdf",
         formData,
         {
           headers: {
@@ -188,7 +189,7 @@ function PdfParser() {
               accept="application/pdf"
             />
 
-           <h1 className="text-xl font-semibold mb-4">Input Description</h1>
+           {/* <h1 className="text-xl font-semibold mb-4">Input Description</h1>
                <ReactQuill
               style={{ width: "100%", height: 180 }}
               className="text-bee-black dark:text-bee-white bg-bee-paleGray dark:bg-bee-ebonyGem rounded-lg appearance-none dark:focus:!border-bee-primary focus:outline-none focus:!border-bee-primary placeholder:!text-gray-800 dark:placeholder:!text-gray-700"
@@ -203,12 +204,12 @@ function PdfParser() {
             >
               Calculate Match Score
               {loading && <ImSpinner6 className=" animate-spin " />}
-            </button>
+            </button> */}
 
           {/* //  OR Just Select your Job & Calculate Score  */}
 
 
-            {/* <Select
+            <Select
               options={options}
               labelField="name"
               valueField="id"
@@ -220,7 +221,7 @@ function PdfParser() {
             >
               Calculate Match Score
               {loading && <ImSpinner6 className=" animate-spin " />}
-            </button> */}
+            </button>
           </div>
           <div className="w-full sm:w-1/2 px-4">
             <div className="mt-4 sm:mt-0">
