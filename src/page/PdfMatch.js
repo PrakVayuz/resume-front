@@ -230,23 +230,23 @@ function PdfParser() {
                 className="bg-gray-200 p-4 rounded-md overflow-auto"
                 style={{ maxHeight: "200px" }}
               >
-                {parsedData?.data?.title}
+                {parsedData?.pdfdata?.title}
               </pre>
               <h2 className="text-lg font-semibold mb-2">Text</h2>
               <pre
                 className="bg-gray-200 p-4 rounded-md overflow-auto"
                 style={{ maxHeight: "150px" }}
               >
-                {parsedData?.data?.text}
+                {parsedData?.pdfdata?.text}
               </pre>
               <h2 className="text-lg font-semibold mb-2">Match Score</h2>
               <p className="bg-gray-200 p-4 rounded-md">
                 {parsedData?.data &&
-                  `${Math.round(parsedData?.matchData?.matchScore)} %`}
+                  `${Math.round(parsedData?.data)} %`}
               </p>
               <h2 className="text-lg font-semibold mb-2">Matching Words</h2>
               <MatchingWords
-                matchingWords={parsedData?.matchData?.matchingWords}
+                matchingWords={parsedData?.matchingWords}
                 
               />
             </div>
