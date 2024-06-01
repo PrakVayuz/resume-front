@@ -59,7 +59,9 @@ function PdfParser() {
     const formData = new FormData();
     formData.append("pdfData", selectedFile);
     formData.append("jobDescription", initialRolesValue);
-    formData.append("jobName",1`${selectedRole}`);
+    const jobName = selectedRole.length > 0 ? selectedRole[0].name : "UI/UX";
+    formData.append("jobName", jobName);
+
 
     try {
       const response = await axios.post(
